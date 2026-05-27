@@ -65,52 +65,13 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   color: var(--white);
   text-decoration: none;
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 50%;
-  position: relative;
-}
-
-.brand-mark::before,
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-.brand-mark::before {
-  top: 15px;
-  transform: rotate(-16deg);
-}
-
-.brand-mark::after {
-  top: 24px;
-  transform: rotate(16deg);
-}
-
-.brand strong,
-.brand small {
-  display: block;
-}
-
-.brand strong {
-  letter-spacing: 0;
-  font-size: 0.98rem;
-}
-
-.brand small {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.72rem;
-  text-transform: uppercase;
+.brand-logo {
+  width: clamp(176px, 17vw, 240px);
+  height: auto;
 }
 
 .nav-actions {
@@ -155,8 +116,7 @@ button {
 }
 
 .hero h1,
-.tabs-head h2,
-.sources-section h2 {
+.tabs-head h2 {
   margin: 0;
   letter-spacing: 0;
 }
@@ -230,12 +190,11 @@ main {
 .model-grid p,
 .deep-cards p,
 .app-intro p,
-.sources-section p {
+.sources-panel p {
   color: var(--muted);
 }
 
-.tabs-shell,
-.sources-section {
+.tabs-shell {
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -248,15 +207,14 @@ main {
   margin-bottom: 20px;
 }
 
-.tabs-head h2,
-.sources-section h2 {
+.tabs-head h2 {
   font-size: clamp(2rem, 4vw, 4rem);
   line-height: 1;
 }
 
 .tablist {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 8px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
@@ -302,6 +260,10 @@ main {
 
 .tab-panel.active {
   display: block;
+}
+
+.tab-panel:focus {
+  outline: none;
 }
 
 .panel-grid,
@@ -814,10 +776,16 @@ th {
   margin-top: 28px;
 }
 
-.sources-section {
+.sources-panel {
   border-top: 1px solid var(--line);
-  padding-top: 48px;
-  margin-top: 24px;
+  padding-top: 26px;
+}
+
+.sources-panel h3 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  max-width: 920px;
+  margin: 8px 0 18px;
 }
 
 .sources-grid {
@@ -866,7 +834,7 @@ th {
   }
 
   .tablist {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .panel-grid,
@@ -891,6 +859,10 @@ th {
 
   .nav-actions {
     display: none;
+  }
+
+  .brand-logo {
+    width: 172px;
   }
 
   .hero-copy {

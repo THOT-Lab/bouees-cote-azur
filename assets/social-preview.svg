@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Les Bouées de Côte d'Azur</title>
+  <desc id="desc">Aperçu de partage pour les réseaux sociaux et WhatsApp.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#052b37"/>
+      <stop offset=".52" stop-color="#0b6b7a"/>
+      <stop offset="1" stop-color="#65c5bc"/>
+    </linearGradient>
+    <radialGradient id="light" cx=".78" cy=".22" r=".72">
+      <stop stop-color="#f8f4ec" stop-opacity=".5"/>
+      <stop offset=".55" stop-color="#f8f4ec" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#f8f4ec" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sea)"/>
+  <rect width="1200" height="630" fill="url(#light)"/>
+  <path d="M0 430c145-54 242 46 380-12 116-49 181-114 316-58 112 46 183 72 297 20 72-33 136-41 207-18v268H0z" fill="#031f29" opacity=".42"/>
+  <path d="M860 132c74 20 139 77 176 150 27 52 36 109 30 164" fill="none" stroke="#f8f4ec" stroke-opacity=".28" stroke-width="2"/>
+  <g transform="translate(82 74)" fill="none">
+    <circle cx="58" cy="58" r="48" stroke="#c8a66f" stroke-width="3"/>
+    <path d="M31 67c12-10 21-10 31 0s20 10 32 0" stroke="#f8f4ec" stroke-linecap="round" stroke-width="5"/>
+    <path d="M37 50c9-7 16-7 24 0s15 7 24 0" stroke="#72d0c8" stroke-linecap="round" stroke-width="3"/>
+    <path d="M58 26v65" stroke="#f8f4ec" stroke-linecap="round" stroke-width="3"/>
+    <circle cx="58" cy="42" r="12" stroke="#c8a66f" stroke-width="5"/>
+  </g>
+  <text x="82" y="268" fill="#f8f4ec" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="780" letter-spacing="0">Les Bouées</text>
+  <text x="82" y="362" fill="#f8f4ec" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="780" letter-spacing="0">de Côte d’Azur</text>
+  <text x="86" y="424" fill="#c8a66f" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4">GRANDE PLAISANCE · MONACO → SAINT-TROPEZ</text>
+  <text x="86" y="502" fill="#f8f4ec" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="520">Des mouillages premium, écologiques et réservables.</text>
+</svg>

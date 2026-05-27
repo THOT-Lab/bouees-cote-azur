@@ -6,8 +6,20 @@
     <title>Les Bouées de Côte d’Azur | Grande plaisance</title>
     <meta
       name="description"
-      content="Page stratégique sur les bouées d'installation pour grande plaisance entre Monaco et Saint-Tropez : réglementation, système existant, projet, business model et application."
+      content="Des mouillages premium, écologiques et réservables pour la grande plaisance entre Monaco et Saint-Tropez."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Les Bouées de Côte d’Azur" />
+    <meta property="og:description" content="Des mouillages premium, écologiques et réservables pour la grande plaisance." />
+    <meta property="og:image" content="https://thot-lab.github.io/bouees-cote-azur/assets/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Les Bouées de Côte d’Azur" />
+    <meta name="twitter:description" content="Des mouillages premium, écologiques et réservables pour la grande plaisance." />
+    <meta name="twitter:image" content="https://thot-lab.github.io/bouees-cote-azur/assets/social-preview.png" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css" />
@@ -16,14 +28,10 @@
     <header class="hero" id="top">
       <nav class="nav" aria-label="Navigation principale">
         <a class="brand" href="#top" aria-label="Les Bouées de Côte d’Azur">
-          <span class="brand-mark"></span>
-          <span>
-            <strong>Les Bouées</strong>
-            <small>Côte d’Azur</small>
-          </span>
+          <img class="brand-logo" src="assets/logo.svg" alt="Les Bouées de Côte d’Azur" />
         </a>
         <div class="nav-actions">
-          <a href="#sources" class="ghost-link">Sources</a>
+          <a href="#sources" class="ghost-link" data-open-tab="sources">Sources</a>
           <a href="#tabs" class="button-link">Étude</a>
         </div>
       </nav>
@@ -102,6 +110,9 @@
           <button class="tab-button" role="tab" aria-selected="false" aria-controls="strategie" id="tab-strategie">
             <i data-lucide="compass"></i><span>Stratégie</span>
           </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="sources" id="tab-sources">
+            <i data-lucide="book-open-check"></i><span>Sources</span>
+          </button>
         </div>
 
         <section class="tab-panel active" role="tabpanel" tabindex="0" id="reglementaire" aria-labelledby="tab-reglementaire">
@@ -151,7 +162,7 @@
                 <li><b>DIRM Méditerranée</b> : stratégie de façade, inventaires ZMEL, coordination sectorielle.</li>
                 <li><b>OFB, Natura 2000, DREAL</b> : biodiversité, incidences, doctrine ERC.</li>
                 <li><b>Communes et intercommunalités</b> : portage, DSP, acceptabilité locale.</li>
-                <li><b>SHOM / DONIA / Nav&Co</b> : cartographie, information plaisanciers, données d’usage.</li>
+                <li><b>SHOM / DONIA / Nav&amp;Co</b> : cartographie, information plaisanciers, données d’usage.</li>
               </ul>
             </aside>
           </div>
@@ -199,7 +210,7 @@
               </p>
             </div>
             <figure class="photo-card">
-              <img src="https://i0.wp.com/donia.fr/wp-content/uploads/2022/09/donia-mooring.jpg?resize=840%2C560&ssl=1" alt="Coffre Donia Mooring avec yacht amarré" />
+              <img src="https://i0.wp.com/donia.fr/wp-content/uploads/2022/09/donia-mooring.jpg?resize=840%2C560&amp;ssl=1" alt="Coffre Donia Mooring avec yacht amarré" />
               <figcaption>Photo DONIA Mooring, crédit indiqué par DONIA : Alexandra Alias / Marine Nationale / Défense.</figcaption>
             </figure>
           </div>
@@ -524,34 +535,40 @@
             </article>
           </div>
         </section>
-      </section>
 
-      <section class="sources-section" id="sources">
-        <span class="mini-label">Sources utilisées</span>
-        <h2>Liens institutionnels, techniques, scientifiques et sectoriels</h2>
-        <div class="sources-grid">
-          <a href="https://www.premar-mediterranee.gouv.fr/dossier/j-aime-la-mediterranee" target="_blank" rel="noreferrer">Préfecture maritime · AP 123/2019 et déclinaisons locales</a>
-          <a href="https://www.premar-mediterranee.gouv.fr/communiques-presse/une-nouvelle-reglementation-des-mouillages-en-mediterranee-pour-proteger-la-posidonie-et-renforcer-la-securite-maritime" target="_blank" rel="noreferrer">Préfecture maritime · réglementation mouillages / posidonie</a>
-          <a href="https://www.dirm.mediterranee.developpement-durable.gouv.fr/forum-mouillage-mediterranee-2024-a3194.html" target="_blank" rel="noreferrer">DIRM Méditerranée · Forum Mouillage 2024</a>
-          <a href="https://www.dirm.mediterranee.developpement-durable.gouv.fr/IMG/pdf/inventaire_zmel_2024.pdf" target="_blank" rel="noreferrer">DIRM · Inventaire ZMEL Méditerranée 2024</a>
-          <a href="https://donia.fr/donia-mooring-application/" target="_blank" rel="noreferrer">DONIA Mooring · application, tarifs, localisation</a>
-          <a href="https://medtrix.fr/donia-mooring-14/" target="_blank" rel="noreferrer">Medtrix · module DONIA Mooring</a>
-          <a href="https://pampelonne-mooring.com/zone-de-mouillage-pampelonne/" target="_blank" rel="noreferrer">Pampelonne Mooring · ZMEL 210 bouées</a>
-          <a href="https://www.ramatuelle.fr/wp-content/uploads/2024/06/arrete-20-juin-2023-mouillage-baie-de-Pampelonne.pdf" target="_blank" rel="noreferrer">Arrêté Pampelonne · mouillage 24 m et plus</a>
-          <a href="https://www.akkel.fr/appel-offre/2024-52051-concession-service-public-creation-zmel" target="_blank" rel="noreferrer">Avis concession Pampelonne · 7,30 M€</a>
-          <a href="https://www.golfe-sainttropez.fr/vivre-ici/espaces-maritimes/gerer-pour-preserver/la-gestion-de-la-plaisance/" target="_blank" rel="noreferrer">Golfe de Saint-Tropez · gestion de la plaisance</a>
-          <a href="https://medtrix.fr/en/impact-of-large-ship-anchoring-in-the-french-mediterranean-34-4/" target="_blank" rel="noreferrer">Medtrix · impact mouillage grands navires / AIS</a>
-          <a href="https://medtrix.fr/wp-content/uploads/2023/09/Anchoring-pressure-and-the-effectiveness-of-new-management-measures-quantified-using-AIS-data-and-a-mobile-application.pdf" target="_blank" rel="noreferrer">Marine Pollution Bulletin 2023 · pression d’ancrage et mesures de gestion</a>
-          <a href="https://www.sciencedirect.com/science/article/pii/S0964569121001770" target="_blank" rel="noreferrer">Ocean & Coastal Management · impacts plaisance Méditerranée</a>
-          <a href="https://www.sciencedirect.com/science/article/pii/S0964569101000485" target="_blank" rel="noreferrer">Artificial reefs · revue design, gestion, performance</a>
-          <a href="https://www.sciencedirect.com/science/article/pii/S0964569125002509" target="_blank" rel="noreferrer">FADs Méditerranée · revue systématique 2025</a>
-          <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030454" target="_blank" rel="noreferrer">PLOS ONE · longévité clonale de Posidonia oceanica</a>
-          <a href="https://www.gisman-sa.com/mooring-buoys" target="_blank" rel="noreferrer">GISMAN · mooring buoys</a>
-          <a href="https://www.gisman-sa.com/polyethylene-buoys" target="_blank" rel="noreferrer">GISMAN · bouées polyéthylène</a>
-          <a href="https://seaflex.com/products/seaflex-mooring-system/" target="_blank" rel="noreferrer">SEAFLEX · systèmes de mouillage élastique</a>
-          <a href="https://leportvauban.com/location-despaces-iyca/" target="_blank" rel="noreferrer">Port Vauban · IYCA 19 postes 70-160 m</a>
-          <a href="https://www.ports-monaco.com/les-ports-de-monaco/le-port-hercule/" target="_blank" rel="noreferrer">Ports de Monaco · Port Hercule</a>
-        </div>
+        <section class="tab-panel" role="tabpanel" tabindex="0" id="sources" aria-labelledby="tab-sources">
+          <div class="sources-panel">
+            <span class="mini-label">Sources utilisées</span>
+            <h3>Liens institutionnels, techniques, scientifiques et sectoriels</h3>
+            <p>
+              Base documentaire utilisée pour cadrer la réglementation, qualifier l’offre existante,
+              documenter les hypothèses techniques et poser les précautions scientifiques.
+            </p>
+            <div class="sources-grid">
+              <a href="https://www.premar-mediterranee.gouv.fr/dossier/j-aime-la-mediterranee" target="_blank" rel="noreferrer">Préfecture maritime · AP 123/2019 et déclinaisons locales</a>
+              <a href="https://www.premar-mediterranee.gouv.fr/communiques-presse/une-nouvelle-reglementation-des-mouillages-en-mediterranee-pour-proteger-la-posidonie-et-renforcer-la-securite-maritime" target="_blank" rel="noreferrer">Préfecture maritime · réglementation mouillages / posidonie</a>
+              <a href="https://www.dirm.mediterranee.developpement-durable.gouv.fr/forum-mouillage-mediterranee-2024-a3194.html" target="_blank" rel="noreferrer">DIRM Méditerranée · Forum Mouillage 2024</a>
+              <a href="https://www.dirm.mediterranee.developpement-durable.gouv.fr/IMG/pdf/inventaire_zmel_2024.pdf" target="_blank" rel="noreferrer">DIRM · Inventaire ZMEL Méditerranée 2024</a>
+              <a href="https://donia.fr/donia-mooring-application/" target="_blank" rel="noreferrer">DONIA Mooring · application, tarifs, localisation</a>
+              <a href="https://medtrix.fr/donia-mooring-14/" target="_blank" rel="noreferrer">Medtrix · module DONIA Mooring</a>
+              <a href="https://pampelonne-mooring.com/zone-de-mouillage-pampelonne/" target="_blank" rel="noreferrer">Pampelonne Mooring · ZMEL 210 bouées</a>
+              <a href="https://www.ramatuelle.fr/wp-content/uploads/2024/06/arrete-20-juin-2023-mouillage-baie-de-Pampelonne.pdf" target="_blank" rel="noreferrer">Arrêté Pampelonne · mouillage 24 m et plus</a>
+              <a href="https://www.akkel.fr/appel-offre/2024-52051-concession-service-public-creation-zmel" target="_blank" rel="noreferrer">Avis concession Pampelonne · 7,30 M€</a>
+              <a href="https://www.golfe-sainttropez.fr/vivre-ici/espaces-maritimes/gerer-pour-preserver/la-gestion-de-la-plaisance/" target="_blank" rel="noreferrer">Golfe de Saint-Tropez · gestion de la plaisance</a>
+              <a href="https://medtrix.fr/en/impact-of-large-ship-anchoring-in-the-french-mediterranean-34-4/" target="_blank" rel="noreferrer">Medtrix · impact mouillage grands navires / AIS</a>
+              <a href="https://medtrix.fr/wp-content/uploads/2023/09/Anchoring-pressure-and-the-effectiveness-of-new-management-measures-quantified-using-AIS-data-and-a-mobile-application.pdf" target="_blank" rel="noreferrer">Marine Pollution Bulletin 2023 · pression d’ancrage et mesures de gestion</a>
+              <a href="https://www.sciencedirect.com/science/article/pii/S0964569121001770" target="_blank" rel="noreferrer">Ocean & Coastal Management · impacts plaisance Méditerranée</a>
+              <a href="https://www.sciencedirect.com/science/article/pii/S0964569101000485" target="_blank" rel="noreferrer">Artificial reefs · revue design, gestion, performance</a>
+              <a href="https://www.sciencedirect.com/science/article/pii/S0964569125002509" target="_blank" rel="noreferrer">FADs Méditerranée · revue systématique 2025</a>
+              <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030454" target="_blank" rel="noreferrer">PLOS ONE · longévité clonale de Posidonia oceanica</a>
+              <a href="https://www.gisman-sa.com/mooring-buoys" target="_blank" rel="noreferrer">GISMAN · mooring buoys</a>
+              <a href="https://www.gisman-sa.com/polyethylene-buoys" target="_blank" rel="noreferrer">GISMAN · bouées polyéthylène</a>
+              <a href="https://seaflex.com/products/seaflex-mooring-system/" target="_blank" rel="noreferrer">SEAFLEX · systèmes de mouillage élastique</a>
+              <a href="https://leportvauban.com/location-despaces-iyca/" target="_blank" rel="noreferrer">Port Vauban · IYCA 19 postes 70-160 m</a>
+              <a href="https://www.ports-monaco.com/les-ports-de-monaco/le-port-hercule/" target="_blank" rel="noreferrer">Ports de Monaco · Port Hercule</a>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
 

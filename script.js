@@ -1,7 +1,13 @@
 const tabs = Array.from(document.querySelectorAll(".tab-button"));
 const panels = Array.from(document.querySelectorAll(".tab-panel"));
+const tabTriggers = Array.from(document.querySelectorAll("[data-open-tab]"));
+const mapInvalidationDelay = 80;
 
 function activateTab(button) {
+  if (!button) {
+    return;
+  }
+
   tabs.forEach((tab) => {
     const active = tab === button;
     tab.classList.toggle("active", active);
@@ -15,16 +21,26 @@ function activateTab(button) {
   setTimeout(() => {
     existingMap?.invalidateSize();
     projectMap?.invalidateSize();
-  }, 80);
+  }, mapInvalidationDelay);
+}
+
+function openTab(panelId, updateHash = true) {
+  const button = tabs.find((tab) => tab.getAttribute("aria-controls") === panelId);
+  activateTab(button);
+
+  if (button && updateHash) {
+    history.replaceState(null, "", `#${panelId}`);
+  }
 }
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    activateTab(tab);
-    history.replaceState(null, "", `#${tab.getAttribute("aria-controls")}`);
+    openTab(tab.getAttribute("aria-controls"));
   });
+
   tab.addEventListener("keydown", (event) => {
     const current = tabs.indexOf(tab);
+
     if (event.key === "ArrowRight") {
       event.preventDefault();
       tabs[(current + 1) % tabs.length].focus();
@@ -35,15 +51,23 @@ tabs.forEach((tab) => {
     }
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      activateTab(tab);
+      openTab(tab.getAttribute("aria-controls"));
     }
   });
 });
 
+tabTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    openTab(trigger.dataset.openTab);
+    document.getElementById("tabs")?.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
 const initialPanel = window.location.hash.slice(1);
-const initialButton = tabs.find((tab) => tab.getAttribute("aria-controls") === initialPanel);
-if (initialButton) {
-  activateTab(initialButton);
+if (initialPanel) {
+  openTab(initialPanel, false);
+  document.getElementById("tabs")?.scrollIntoView();
 }
 
 if (window.lucide) {
