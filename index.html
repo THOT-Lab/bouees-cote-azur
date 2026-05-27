@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Les Bouées de Côte d’Azur | Grande plaisance</title>
+    <meta
+      name="description"
+      content="Page stratégique sur les bouées d'installation pour grande plaisance entre Monaco et Saint-Tropez : réglementation, système existant, projet, business model et application."
+    />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="brand" href="#top" aria-label="Les Bouées de Côte d’Azur">
+          <span class="brand-mark"></span>
+          <span>
+            <strong>Les Bouées</strong>
+            <small>Côte d’Azur</small>
+          </span>
+        </a>
+        <div class="nav-actions">
+          <a href="#sources" class="ghost-link">Sources</a>
+          <a href="#tabs" class="button-link">Étude</a>
+        </div>
+      </nav>
+
+      <section class="hero-copy">
+        <p class="eyebrow">Grande plaisance · Monaco → Saint-Tropez · Région PACA</p>
+        <h1>Les Bouées de Côte d’Azur</h1>
+        <p>
+          Une proposition premium de mouillages écologiques, connectés et réservables, conçue pour
+          accueillir les yachts de 24 à 80 mètres sans exporter la pression d’ancrage vers la posidonie.
+        </p>
+        <div class="hero-metrics" aria-label="Chiffres clés">
+          <div>
+            <strong>10</strong>
+            <span>bouées DONIA aujourd’hui réservables Cannes · Golfe-Juan · Beaulieu</span>
+          </div>
+          <div>
+            <strong>60</strong>
+            <span>places grande plaisance annoncées à Pampelonne</span>
+          </div>
+          <div>
+            <strong>22</strong>
+            <span>bouées premium proposées en phase 1, hors Pampelonne</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="executive-strip" aria-label="Synthèse">
+        <article>
+          <span class="mini-label">Thèse</span>
+          <p>
+            Le cadre réglementaire a réduit la liberté de mouillage des yachts ≥ 24 m ; la demande reste
+            forte, mais l’offre de coffres premium réservables reste rare hors Pampelonne.
+          </p>
+        </article>
+        <article>
+          <span class="mini-label">Angle régulateur</span>
+          <p>
+            Une ZMEL grande plaisance bien dessinée transforme un risque écologique en redevance publique,
+            sécurité de plan d’eau, données d’usage et restauration marine fléchée.
+          </p>
+        </article>
+        <article>
+          <span class="mini-label">Angle client</span>
+          <p>
+            Réserver une bouée stable, proche des destinations, avec preuve environnementale et services à la
+            demande, vaut davantage qu’un mouillage incertain ou juridiquement exposé.
+          </p>
+        </article>
+      </section>
+
+      <section class="tabs-shell" id="tabs">
+        <div class="tabs-head">
+          <p class="eyebrow">Dossier progressif</p>
+          <h2>Une page pour convaincre, puis exécuter</h2>
+        </div>
+
+        <div class="tablist" role="tablist" aria-label="Sections du dossier">
+          <button class="tab-button active" role="tab" aria-selected="true" aria-controls="reglementaire" id="tab-reglementaire">
+            <i data-lucide="scale"></i><span>Cadre</span>
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="existant" id="tab-existant">
+            <i data-lucide="map-pin"></i><span>Existant</span>
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="projet" id="tab-projet">
+            <i data-lucide="waves"></i><span>Projet</span>
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="business" id="tab-business">
+            <i data-lucide="chart-no-axes-combined"></i><span>Business</span>
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="application" id="tab-application">
+            <i data-lucide="smartphone"></i><span>Application</span>
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="strategie" id="tab-strategie">
+            <i data-lucide="compass"></i><span>Stratégie</span>
+          </button>
+        </div>
+
+        <section class="tab-panel active" role="tabpanel" tabindex="0" id="reglementaire" aria-labelledby="tab-reglementaire">
+          <div class="panel-grid">
+            <div class="panel-main">
+              <span class="mini-label">Réglementation</span>
+              <h3>Le mouillage grande plaisance est devenu un sujet public de protection, pas seulement de confort nautique.</h3>
+              <p>
+                Le pivot est l’arrêté préfectoral n° 123/2019 du 3 juin 2019, qui pose le cadre général du
+                mouillage et de l’arrêt des navires en Méditerranée française. Les arrêtés locaux déclinent ce
+                cadre pour les navires de 24 mètres et plus, avec un objectif explicite de sécurité maritime,
+                sûreté et protection de l’environnement.
+                <a href="https://www.premar-mediterranee.gouv.fr/dossier/j-aime-la-mediterranee" target="_blank" rel="noreferrer">Préfecture maritime</a>
+              </p>
+              <p>
+                La doctrine publique n’est pas seulement d’interdire : elle encourage les alternatives locales,
+                notamment les ZMEL et coffres écologiques, lorsqu’ils évitent le ragage des chaînes, l’ancrage
+                dans les herbiers et l’encombrement désordonné des baies.
+                <a href="https://www.premar-mediterranee.gouv.fr/communiques-presse/une-nouvelle-reglementation-des-mouillages-en-mediterranee-pour-proteger-la-posidonie-et-renforcer-la-securite-maritime" target="_blank" rel="noreferrer">Communiqué Premar</a>
+              </p>
+
+              <div class="timeline">
+                <div>
+                  <b>2019</b>
+                  <span>Arrêté cadre 123/2019, puis stratégie méditerranéenne de gestion des mouillages.</span>
+                </div>
+                <div>
+                  <b>2020-2023</b>
+                  <span>Déclinaisons locales : Alpes-Maritimes, Var, zones de report au large et arrêt sur bouées autorisé par titre domanial.</span>
+                </div>
+                <div>
+                  <b>2024</b>
+                  <span>Forum Mouillage Méditerranée : développement d’alternatives grande et petite plaisance.</span>
+                </div>
+                <div>
+                  <b>2025</b>
+                  <span>Pampelonne devient la référence d’échelle avec 210 bouées, dont 60 pour la grande plaisance.</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="side-card">
+              <h4>Acteurs à embarquer</h4>
+              <ul class="clean-list">
+                <li><b>Préfecture maritime</b> : police administrative en mer, arrêtés mouillage.</li>
+                <li><b>Préfet de département / DDTM</b> : titres d’occupation du domaine public maritime.</li>
+                <li><b>DIRM Méditerranée</b> : stratégie de façade, inventaires ZMEL, coordination sectorielle.</li>
+                <li><b>OFB, Natura 2000, DREAL</b> : biodiversité, incidences, doctrine ERC.</li>
+                <li><b>Communes et intercommunalités</b> : portage, DSP, acceptabilité locale.</li>
+                <li><b>SHOM / DONIA / Nav&Co</b> : cartographie, information plaisanciers, données d’usage.</li>
+              </ul>
+            </aside>
+          </div>
+
+          <div class="license-grid">
+            <article>
+              <i data-lucide="file-check-2"></i>
+              <h4>Titre domanial</h4>
+              <p>AOT ou concession/DSP pour occuper le domaine public maritime, avec règlement d’exploitation et redevance.</p>
+            </article>
+            <article>
+              <i data-lucide="leaf"></i>
+              <h4>Environnement</h4>
+              <p>Évaluation Natura 2000, étude bathymétrique, cartographie biocénoses, justification éviter-réduire-compenser.</p>
+            </article>
+            <article>
+              <i data-lucide="ship-wheel"></i>
+              <h4>Sécurité nautique</h4>
+              <p>Commission nautique locale, cercles d’évitage, profondeur, météo admissible, ports de repli, limitations de vitesse.</p>
+            </article>
+            <article>
+              <i data-lucide="receipt-euro"></i>
+              <h4>Redevance</h4>
+              <p>Un argument clé : convertir la pression de mouillage en revenu public traçable et affectable à la restauration marine.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-panel" role="tabpanel" tabindex="0" id="existant" aria-labelledby="tab-existant">
+          <div class="split">
+            <div>
+              <span class="mini-label">Système existant</span>
+              <h3>Une offre réelle, mais incomplète sur l’axe Monaco → Saint-Tropez.</h3>
+              <p>
+                DONIA Mooring référence des coffres connectés pour yachts de 24 à 70 m à Cannes, Golfe-Juan
+                et Beaulieu/Eze. L’inventaire ZMEL 2024 de la DIRM indique 7 bouées Cannes-Antibes et 3
+                bouées Beaulieu, ouvertes du 1er avril au 31 octobre, avec réservation applicative.
+                <a href="https://www.dirm.mediterranee.developpement-durable.gouv.fr/IMG/pdf/inventaire_zmel_2024.pdf" target="_blank" rel="noreferrer">Inventaire DIRM 2024</a>
+              </p>
+              <p>
+                Le système public-privé le plus massif est désormais Pampelonne Mooring : 210 bouées
+                écologiques, dont 60 annoncées pour la grande plaisance, dans une baie Natura 2000 très
+                exposée à la pression estivale.
+                <a href="https://pampelonne-mooring.com/zone-de-mouillage-pampelonne/" target="_blank" rel="noreferrer">Pampelonne Mooring</a>
+              </p>
+            </div>
+            <figure class="photo-card">
+              <img src="https://i0.wp.com/donia.fr/wp-content/uploads/2022/09/donia-mooring.jpg?resize=840%2C560&ssl=1" alt="Coffre Donia Mooring avec yacht amarré" />
+              <figcaption>Photo DONIA Mooring, crédit indiqué par DONIA : Alexandra Alias / Marine Nationale / Défense.</figcaption>
+            </figure>
+          </div>
+
+          <div class="map-layout">
+            <div id="existingMap" class="map"></div>
+            <div class="table-wrap">
+              <table>
+                <caption>Inventaire opérationnel synthétique</caption>
+                <thead>
+                  <tr>
+                    <th>Zone</th>
+                    <th>Nombre</th>
+                    <th>Type</th>
+                    <th>Navires</th>
+                    <th>Position</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Cannes · Île Sainte-Marguerite</td>
+                    <td>4</td>
+                    <td>Coffres connectés DONIA, flotteur GISMAN, verrouillage mobile</td>
+                    <td>24-70 m</td>
+                    <td>NW, SW, NE, SE de Sainte-Marguerite</td>
+                  </tr>
+                  <tr>
+                    <td>Golfe-Juan · Juan-les-Pins</td>
+                    <td>3</td>
+                    <td>Coffres connectés DONIA, ancrage châssis acier + ancres à vis/bascule</td>
+                    <td>24-70 m</td>
+                    <td>Trois points dans le Golfe-Juan</td>
+                  </tr>
+                  <tr>
+                    <td>Eze · Beaulieu-sur-Mer</td>
+                    <td>3</td>
+                    <td>Coffres connectés DONIA, évitage, réservation app/téléphone</td>
+                    <td>24-70 m</td>
+                    <td>Mer d’Eze, contrebas du village, rade de Beaulieu</td>
+                  </tr>
+                  <tr>
+                    <td>Pampelonne · Ramatuelle</td>
+                    <td>210 dont 60 grande plaisance</td>
+                    <td>ZMEL écologique sur pieux/ancres, réservation dédiée</td>
+                    <td>Jusqu’à 80 m selon zone</td>
+                    <td>Baie de Pampelonne, zones jaunes/régulées</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="note">
+                Les coordonnées affichées sur la carte sont indicatives à l’échelle de la zone ; un dossier
+                opérable devra reprendre les coordonnées SHOM/AOT et une bathymétrie géoréférencée.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-panel" role="tabpanel" tabindex="0" id="projet" aria-labelledby="tab-projet">
+          <div class="panel-grid">
+            <div class="panel-main">
+              <span class="mini-label">Proposition</span>
+              <h3>Installer une grappe de bouées premium, pas une simple rangée de flotteurs.</h3>
+              <p>
+                La proposition phase 1 porte sur <b>22 bouées grande plaisance</b> : 6 à Beaulieu/Cap Ferrat,
+                5 autour de Lérins/Cannes, 5 dans le secteur Golfe-Juan/Cap d’Antibes et 6 en appui du golfe
+                de Saint-Tropez hors périmètre Pampelonne. L’objectif : capter les unités à forte dépense
+                locale tout en donnant aux capitaines une alternative claire à l’ancre.
+              </p>
+              <p>
+                Les secteurs prioritaires correspondent aux zones où les données AIS et les analyses Medtrix
+                ont déjà identifié des concentrations de grande plaisance et des pertes d’herbiers, notamment
+                Golfe-Juan, rade de Beaulieu et golfe de Saint-Tropez.
+                <a href="https://medtrix.fr/en/impact-of-large-ship-anchoring-in-the-french-mediterranean-34-4/" target="_blank" rel="noreferrer">Medtrix / Andromède</a>
+              </p>
+            </div>
+            <aside class="side-card accent">
+              <h4>Justification institutionnelle</h4>
+              <p>
+                Le projet ne se présente pas comme une privatisation du plan d’eau, mais comme une
+                infrastructure d’évitement : réduire l’impact, canaliser l’usage, rémunérer le domaine public,
+                fournir des données de fréquentation et financer une restauration marine vérifiable.
+              </p>
+            </aside>
+          </div>
+
+          <div class="project-map-row">
+            <div id="projectMap" class="map tall"></div>
+            <div class="stack">
+              <article class="metric-card">
+                <span>CAPEX indicatif</span>
+                <strong>4,9 M€</strong>
+                <p>22 bouées, plateforme digitale, études, aléas et lancement.</p>
+              </article>
+              <article class="metric-card">
+                <span>Coût par bouée</span>
+                <strong>125-185 k€</strong>
+                <p>Matériel, ligne, ancrage, pose, levés et recette technique.</p>
+              </article>
+              <article class="metric-card">
+                <span>Capacité cible</span>
+                <strong>24-80 m</strong>
+                <p>Deux classes : 24-50 m et 50-80 m, avec dimensionnement météo différencié.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="deep-cards">
+            <article>
+              <h4>Écologie active : posidonie d’abord</h4>
+              <p>
+                La posidonie stocke du carbone, stabilise les fonds, abrite les juvéniles et protège le littoral.
+                Les études sur le mouillage montrent une pression significative des grands navires ; une ligne
+                de mouillage sans contact avec le fond réduit le ragage et l’arrachement.
+              </p>
+            </article>
+            <article>
+              <h4>DCP et récifs : utiles, mais sous protocole</h4>
+              <p>
+                Des dispositifs de concentration de poissons et micro-récifs peuvent accroître l’abri, la
+                complexité et l’observation halieutique. La littérature reste prudente : leur efficacité dépend
+                du design, du suivi et de l’absence d’effet piège. Proposition : modules démontables, pas de
+                filet, matériaux inertes, suivi eDNA/vidéo et retrait si effet indésirable.
+              </p>
+            </article>
+            <article>
+              <h4>Technique</h4>
+              <p>
+                Bouée polyéthylène modulaire type GISMAN ou équivalent, anneau/verrouillage connecté,
+                capteurs tension/occupation, AIS virtuel possible, ligne textile/chaîne relevée, ancrage à vis,
+                bascule ou pieu selon géotechnique. Usage beau temps, seuils météo stricts.
+              </p>
+            </article>
+            <article>
+              <h4>Risques</h4>
+              <p>
+                Sous-dimensionnement météo, conflit d’usage, perception de privatisation, occupation faible
+                hors saison, cybersécurité de réservation, responsabilité en cas de rupture, intrusion dans
+                habitats sensibles. Mitigation : pilotes, clauses d’ouverture, audit annuel et assurance dédiée.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-panel" role="tabpanel" tabindex="0" id="business" aria-labelledby="tab-business">
+          <div class="business-hero">
+            <div>
+              <span class="mini-label">Business model</span>
+              <h3>Financer l’infrastructure par l’usage, puis rendre la valeur visible au régulateur.</h3>
+              <p>
+                La logique proposée : investisseur privé ou société de projet concessionnaire finance le CAPEX,
+                exploite la réservation, reverse une redevance fixe et variable, et flèche une part des recettes
+                vers restauration/suivi écologique. Le régulateur obtient une infrastructure, des données et une
+                rente domaniale sans porter tout le risque commercial.
+              </p>
+            </div>
+            <div class="finance-box">
+              <span>Scénario central</span>
+              <strong>1,45 M€ CA annuel</strong>
+              <p>Base : 22 bouées, 75 nuitées/bouée/saison à 690 € + créneaux journée et services.</p>
+            </div>
+          </div>
+
+          <div class="model-grid">
+            <article>
+              <h4>Revenus</h4>
+              <ul class="clean-list">
+                <li>Nuitée moyenne pondérée : 690 € HT, inspirée des tarifs DONIA 2024 pour 40-70 m.</li>
+                <li>Occupation prudente : 75 nuitées par bouée et par saison, soit 35 % de la période avril-octobre.</li>
+                <li>Créneaux journée : 280 k€ à 340 k€ selon météo et événements Cannes/Monaco/Saint-Tropez.</li>
+                <li>Services : assistance amarrage, déchets, avitaillement partenaire, conciergerie capitaines.</li>
+              </ul>
+            </article>
+            <article>
+              <h4>Dépenses</h4>
+              <ul class="clean-list">
+                <li>Maintenance et contrôle : 8-12 k€ / bouée / an, incluant plongeur, tension, usure, nettoyage.</li>
+                <li>Application et support : 140-220 k€ / an, paiement, météo, service client, supervision.</li>
+                <li>Assurance, juridique, comptabilité concession : 90-130 k€ / an.</li>
+                <li>Marketing B2B yacht managers / conciergeries / brokers : 50-90 k€ / an.</li>
+              </ul>
+            </article>
+            <article class="public-fee">
+              <h4>Redevance publique proposée</h4>
+              <p>
+                Garantie fixe : <b>250 k€ / an</b>. Variable : <b>15 % du CA au-delà de 1,1 M€</b>.
+                Fléchage recommandé : 20 % des recettes nettes concessionnaire vers suivi scientifique,
+                restauration posidonie et transparence annuelle.
+              </p>
+            </article>
+            <article>
+              <h4>Lecture financière</h4>
+              <p>
+                Avec 4,9 M€ de CAPEX et un EBITDA central de 350-500 k€, le projet se finance sur 10-14 ans
+                avant dette, plus rapidement si la saison premium dépasse 90 nuitées par bouée ou si les services
+                captent les dépenses annexes.
+              </p>
+            </article>
+          </div>
+
+          <div class="bar-chart" aria-label="Répartition indicative du chiffre d'affaires">
+            <div style="--v: 78%"><span>Nuitées</span><b>1,14 M€</b></div>
+            <div style="--v: 22%"><span>Journée</span><b>0,31 M€</b></div>
+            <div style="--v: 14%"><span>Services</span><b>0,20 M€</b></div>
+            <div style="--v: 28%"><span>Redevance</span><b>0,40 M€</b></div>
+          </div>
+        </section>
+
+        <section class="tab-panel" role="tabpanel" tabindex="0" id="application" aria-labelledby="tab-application">
+          <div class="app-intro">
+            <span class="mini-label">Application</span>
+            <h3>“Les Bouées de Côte d’Azur” : réserver une nuit calme en trois gestes.</h3>
+            <p>
+              Une application très simple pour capitaines, yacht managers et conciergeries : disponibilité en
+              temps réel, compatibilité longueur/météo, paiement, ouverture du verrouillage, justificatif
+              environnemental et services optionnels.
+            </p>
+          </div>
+
+          <div class="phones">
+            <figure class="phone">
+              <div class="phone-screen">
+                <div class="app-top">
+                  <span>Azur Mooring</span>
+                  <i data-lucide="bell"></i>
+                </div>
+                <div class="mini-map-ui">
+                  <span class="pin p1"></span><span class="pin p2"></span><span class="pin p3"></span>
+                </div>
+                <div class="booking-card-ui">
+                  <b>Cap Ferrat · B05</b>
+                  <span>60-80 m · vent admis 16 kt</span>
+                  <button>Réserver</button>
+                </div>
+              </div>
+              <figcaption>Carte sobre, lecture immédiate des bouées compatibles.</figcaption>
+            </figure>
+
+            <figure class="phone dark-phone">
+              <div class="phone-screen">
+                <div class="app-top">
+                  <span>Réservation</span>
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <div class="slot-stack">
+                  <button class="selected">19h-11h · 760 €</button>
+                  <button>11h-14h · 360 €</button>
+                  <button>14h-19h · 520 €</button>
+                </div>
+                <div class="eco-ticket">
+                  <span>Contribution mer</span>
+                  <strong>20 % fléchés</strong>
+                </div>
+              </div>
+              <figcaption>Prix clair, contribution environnementale visible.</figcaption>
+            </figure>
+
+            <figure class="phone">
+              <div class="phone-screen">
+                <div class="app-top">
+                  <span>Arrivée</span>
+                  <i data-lucide="unlock"></i>
+                </div>
+                <div class="arrival-circle">
+                  <span>36 m</span>
+                  <small>distance bouée</small>
+                </div>
+                <div class="service-row">
+                  <span>Amarrage</span><b>Confirmé</b>
+                </div>
+                <div class="service-row">
+                  <span>Déchets</span><b>21h30</b>
+                </div>
+              </div>
+              <figcaption>Ouverture sécurisée, services légers, pas de friction.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="tab-panel" role="tabpanel" tabindex="0" id="strategie" aria-labelledby="tab-strategie">
+          <div class="strategy-grid">
+            <article>
+              <span class="mini-label">Institutions</span>
+              <h3>Approche régulatrice : venir avec une solution, pas une demande.</h3>
+              <ol class="steps">
+                <li><b>Pré-cadrage DDTM / Préfecture maritime</b> : valider le principe, les zones exclues, le format AOT/DSP et les contraintes de police du mouillage.</li>
+                <li><b>Diagnostic bathymétrique et usages</b> : données AIS, herbiers, sable, évitage, accès secours, conflits pêche/plage/ports.</li>
+                <li><b>Coalition locale</b> : communes, intercommunalités, ports, restaurateurs, chantiers, associations environnementales et yacht managers.</li>
+                <li><b>Pilote lisible</b> : 6 à 8 bouées la première saison, indicateurs publics, extension conditionnée à résultats.</li>
+                <li><b>Contrat social</b> : redevance forte, données ouvertes agrégées, contribution restauration et règles anti-accaparement.</li>
+              </ol>
+            </article>
+
+            <article class="language-card">
+              <span class="mini-label">Éléments de langage</span>
+              <h3>Deux discours, une même promesse.</h3>
+              <div class="quote-block">
+                <b>Pour les régulateurs</b>
+                <p>“Nous ne demandons pas plus de yachts : nous organisons ceux qui sont déjà là, en remplaçant l’ancre invisible par un point d’arrêt contrôlé, traçable et rémunérateur pour le domaine public.”</p>
+              </div>
+              <div class="quote-block">
+                <b>Pour les clients</b>
+                <p>“La plus belle nuit de mouillage est celle que votre capitaine peut réserver, justifier et sécuriser avant même d’arriver dans la baie.”</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="comm-grid">
+            <article>
+              <i data-lucide="landmark"></i>
+              <h4>Document régulateur</h4>
+              <p>Note de doctrine, cartographie, étude d’incidences, modèle de redevance, charte anti-privatisation, protocole de suivi.</p>
+            </article>
+            <article>
+              <i data-lucide="briefcase-business"></i>
+              <h4>Document investisseurs</h4>
+              <p>CAPEX, sensibilité occupation/tarif, risque météo, modèle concession, stratégie d’acquisition B2B, scénario sortie.</p>
+            </article>
+            <article>
+              <i data-lucide="sparkles"></i>
+              <h4>Document clients</h4>
+              <p>Expérience premium, sécurité, proximité destinations, transparence écologique, conciergerie, simplicité de réservation.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="sources-section" id="sources">
+        <span class="mini-label">Sources utilisées</span>
+        <h2>Liens institutionnels, techniques, scientifiques et sectoriels</h2>
+        <div class="sources-grid">
+          <a href="https://www.premar-mediterranee.gouv.fr/dossier/j-aime-la-mediterranee" target="_blank" rel="noreferrer">Préfecture maritime · AP 123/2019 et déclinaisons locales</a>
+          <a href="https://www.premar-mediterranee.gouv.fr/communiques-presse/une-nouvelle-reglementation-des-mouillages-en-mediterranee-pour-proteger-la-posidonie-et-renforcer-la-securite-maritime" target="_blank" rel="noreferrer">Préfecture maritime · réglementation mouillages / posidonie</a>
+          <a href="https://www.dirm.mediterranee.developpement-durable.gouv.fr/forum-mouillage-mediterranee-2024-a3194.html" target="_blank" rel="noreferrer">DIRM Méditerranée · Forum Mouillage 2024</a>
+          <a href="https://www.dirm.mediterranee.developpement-durable.gouv.fr/IMG/pdf/inventaire_zmel_2024.pdf" target="_blank" rel="noreferrer">DIRM · Inventaire ZMEL Méditerranée 2024</a>
+          <a href="https://donia.fr/donia-mooring-application/" target="_blank" rel="noreferrer">DONIA Mooring · application, tarifs, localisation</a>
+          <a href="https://medtrix.fr/donia-mooring-14/" target="_blank" rel="noreferrer">Medtrix · module DONIA Mooring</a>
+          <a href="https://pampelonne-mooring.com/zone-de-mouillage-pampelonne/" target="_blank" rel="noreferrer">Pampelonne Mooring · ZMEL 210 bouées</a>
+          <a href="https://www.ramatuelle.fr/wp-content/uploads/2024/06/arrete-20-juin-2023-mouillage-baie-de-Pampelonne.pdf" target="_blank" rel="noreferrer">Arrêté Pampelonne · mouillage 24 m et plus</a>
+          <a href="https://www.akkel.fr/appel-offre/2024-52051-concession-service-public-creation-zmel" target="_blank" rel="noreferrer">Avis concession Pampelonne · 7,30 M€</a>
+          <a href="https://www.golfe-sainttropez.fr/vivre-ici/espaces-maritimes/gerer-pour-preserver/la-gestion-de-la-plaisance/" target="_blank" rel="noreferrer">Golfe de Saint-Tropez · gestion de la plaisance</a>
+          <a href="https://medtrix.fr/en/impact-of-large-ship-anchoring-in-the-french-mediterranean-34-4/" target="_blank" rel="noreferrer">Medtrix · impact mouillage grands navires / AIS</a>
+          <a href="https://medtrix.fr/wp-content/uploads/2023/09/Anchoring-pressure-and-the-effectiveness-of-new-management-measures-quantified-using-AIS-data-and-a-mobile-application.pdf" target="_blank" rel="noreferrer">Marine Pollution Bulletin 2023 · pression d’ancrage et mesures de gestion</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0964569121001770" target="_blank" rel="noreferrer">Ocean & Coastal Management · impacts plaisance Méditerranée</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0964569101000485" target="_blank" rel="noreferrer">Artificial reefs · revue design, gestion, performance</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0964569125002509" target="_blank" rel="noreferrer">FADs Méditerranée · revue systématique 2025</a>
+          <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030454" target="_blank" rel="noreferrer">PLOS ONE · longévité clonale de Posidonia oceanica</a>
+          <a href="https://www.gisman-sa.com/mooring-buoys" target="_blank" rel="noreferrer">GISMAN · mooring buoys</a>
+          <a href="https://www.gisman-sa.com/polyethylene-buoys" target="_blank" rel="noreferrer">GISMAN · bouées polyéthylène</a>
+          <a href="https://seaflex.com/products/seaflex-mooring-system/" target="_blank" rel="noreferrer">SEAFLEX · systèmes de mouillage élastique</a>
+          <a href="https://leportvauban.com/location-despaces-iyca/" target="_blank" rel="noreferrer">Port Vauban · IYCA 19 postes 70-160 m</a>
+          <a href="https://www.ports-monaco.com/les-ports-de-monaco/le-port-hercule/" target="_blank" rel="noreferrer">Ports de Monaco · Port Hercule</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Étude exploratoire · données publiques et hypothèses de modélisation à auditer avant dépôt institutionnel.</p>
+      <a href="#top">Retour haut</a>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
