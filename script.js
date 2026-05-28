@@ -2,6 +2,9 @@ const tabs = Array.from(document.querySelectorAll(".tab-button"));
 const panels = Array.from(document.querySelectorAll(".tab-panel"));
 const tabTriggers = Array.from(document.querySelectorAll("[data-open-tab]"));
 const mapInvalidationDelay = 80;
+const ideaPad = document.getElementById("ideaPad");
+const ideaSaveStatus = document.getElementById("ideaSaveStatus");
+const ideaStorageKey = "bouees-cote-azur-bac-idee";
 
 function activateTab(button) {
   if (!button) {
@@ -72,6 +75,30 @@ if (initialPanel) {
 
 if (window.lucide) {
   window.lucide.createIcons();
+}
+
+if (ideaPad) {
+  try {
+    ideaPad.value = localStorage.getItem(ideaStorageKey) || "";
+  } catch (error) {
+    if (ideaSaveStatus) {
+      ideaSaveStatus.textContent = "Sauvegarde indisponible";
+    }
+  }
+
+  ideaPad.addEventListener("input", () => {
+    try {
+      localStorage.setItem(ideaStorageKey, ideaPad.value);
+
+      if (ideaSaveStatus) {
+        ideaSaveStatus.textContent = "Enregistré";
+      }
+    } catch (error) {
+      if (ideaSaveStatus) {
+        ideaSaveStatus.textContent = "Sauvegarde indisponible";
+      }
+    }
+  });
 }
 
 const existingPoints = [

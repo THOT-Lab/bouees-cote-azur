@@ -31,6 +31,7 @@
           <img class="brand-logo" src="assets/logo.svg" alt="Les Bouées de Côte d’Azur" />
         </a>
         <div class="nav-actions">
+          <a href="#bac-idee" class="ghost-link" data-open-tab="bac-idee">Bac à idée</a>
           <a href="#sources" class="ghost-link" data-open-tab="sources">Sources</a>
           <a href="#tabs" class="button-link">Étude</a>
         </div>
@@ -109,6 +110,9 @@
           </button>
           <button class="tab-button" role="tab" aria-selected="false" aria-controls="strategie" id="tab-strategie">
             <i data-lucide="compass"></i><span>Stratégie</span>
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="bac-idee" id="tab-bac-idee">
+            <i data-lucide="lightbulb"></i><span>Bac à idée</span>
           </button>
           <button class="tab-button" role="tab" aria-selected="false" aria-controls="sources" id="tab-sources">
             <i data-lucide="book-open-check"></i><span>Sources</span>
@@ -533,6 +537,33 @@
               <h4>Document clients</h4>
               <p>Expérience premium, sécurité, proximité destinations, transparence écologique, conciergerie, simplicité de réservation.</p>
             </article>
+          </div>
+        </section>
+
+        <section class="tab-panel" role="tabpanel" tabindex="0" id="bac-idee" aria-labelledby="tab-bac-idee">
+          <div class="idea-panel">
+            <div class="idea-intro">
+              <span class="mini-label">Notes de travail</span>
+              <h3>Bac à idée</h3>
+              <p>
+                Un espace libre pour poser les intuitions, pistes commerciales, questions institutionnelles ou
+                remarques à reprendre plus tard. Le contenu est enregistré automatiquement dans ce navigateur.
+              </p>
+            </div>
+
+            <div class="idea-editor-shell">
+              <div class="idea-editor-top">
+                <span>Édition libre</span>
+                <span id="ideaSaveStatus" aria-live="polite">Prêt</span>
+              </div>
+              <textarea
+                id="ideaPad"
+                class="idea-editor"
+                aria-label="Bac à idée éditable"
+                placeholder="Écrire une idée, une objection, une piste de rendez-vous, une hypothèse de prix..."
+                spellcheck="true"
+              ></textarea>
+            </div>
           </div>
         </section>
 

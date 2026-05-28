@@ -190,6 +190,7 @@ main {
 .model-grid p,
 .deep-cards p,
 .app-intro p,
+.idea-intro p,
 .sources-panel p {
   color: var(--muted);
 }
@@ -214,7 +215,7 @@ main {
 
 .tablist {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 8px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
@@ -280,6 +281,7 @@ main {
 .split h3,
 .business-hero h3,
 .app-intro h3,
+.idea-intro h3,
 .strategy-grid h3 {
   font-size: clamp(2rem, 4vw, 4.6rem);
   line-height: 0.98;
@@ -291,6 +293,7 @@ main {
 .split p,
 .business-hero p,
 .app-intro p,
+.idea-intro p,
 .strategy-grid p {
   font-size: 1.04rem;
 }
@@ -776,6 +779,61 @@ th {
   margin-top: 28px;
 }
 
+.idea-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.58fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 54px);
+  align-items: start;
+}
+
+.idea-intro h3 {
+  margin: 8px 0 18px;
+}
+
+.idea-editor-shell {
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.idea-editor-top {
+  min-height: 58px;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.idea-editor {
+  width: 100%;
+  min-height: min(58vh, 640px);
+  display: block;
+  border: 0;
+  resize: vertical;
+  padding: clamp(18px, 3vw, 30px);
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(23, 32, 40, 0.055) 1px, transparent 1px) 0 31px / 100% 32px,
+    var(--white);
+  font: inherit;
+  line-height: 32px;
+}
+
+.idea-editor:focus {
+  outline: 2px solid rgba(11, 107, 122, 0.34);
+  outline-offset: -2px;
+}
+
+.idea-editor::placeholder {
+  color: rgba(102, 114, 123, 0.62);
+}
+
 .sources-panel {
   border-top: 1px solid var(--line);
   padding-top: 26px;
@@ -841,6 +899,7 @@ th {
   .split,
   .business-hero,
   .strategy-grid,
+  .idea-panel,
   .map-layout,
   .project-map-row {
     grid-template-columns: 1fr;
@@ -899,6 +958,7 @@ th {
   .split h3,
   .business-hero h3,
   .app-intro h3,
+  .idea-intro h3,
   .strategy-grid h3 {
     font-size: 2.25rem;
   }
